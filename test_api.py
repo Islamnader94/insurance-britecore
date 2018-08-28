@@ -28,19 +28,21 @@ class TestAPI(unittest.TestCase):
         response = requests.get('http://127.0.0.1:5000/')
         self.assertEqual(response.status_code, 200)
 
+    def test_add_route(self):
 
-    def test_get_fields(self):
-        data = dict(name='test', number='83838', date='2018-08-15')
-        response = requests.post('/add', data=json.dumps(data), content_type='application/json')
-
-        response = requests.get('http://127.0.0.1:5000/add', content_type='html/text')
-
+        response = requests.get('http://127.0.0.1:5000/add')
         self.assertEqual(response.status_code, 200)
 
+    def test_addrisk_route(self):
 
-        assert field.get('name') == 'test'
-        assert field.get('number') == '83838'
-        assert field.get('date') == '2018-08-15'
+        response = requests.get('http://127.0.0.1:5000/addrisk')
+        self.assertEqual(response.status_code, 200)
+
+    def test_review_route(self):
+
+        response = requests.get('http://127.0.0.1:5000/review')
+        self.assertEqual(response.status_code, 200)
+
 
 
 
