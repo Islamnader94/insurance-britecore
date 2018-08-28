@@ -2,8 +2,8 @@ import unittest
 import json
 import simplejson
 import os
+import requests
 from app import app, db
-
 
 
 class TestAPI(unittest.TestCase):
@@ -25,18 +25,17 @@ class TestAPI(unittest.TestCase):
         """
         Test if the main route is answering with the correct status code.
         """
-        tester = app.test_client(self)
-        response = tester.get('/', content_type='html/text')
+        response = requests.get('http://127.0.0.1:5000/')
         self.assertEqual(response.status_code, 200)
 
 
     def test_get_fields(self):
         data = dict(name='test', number='83838', date='2018-08-15')
-        response = self.client.post('/add', data=json.dumps(data), content_type='application/json')
+        response = requests.post('/add', data=json.dumps(data), content_type='application/json')
 
-        response = self.client.get('/add')
+        response = requests.get('http://127.0.0.1:5000/add', content_type='html/text')
 
-        assert response.status_code == 200
+        self.assertEqual(response.status_code, 200)
 
 
         assert field.get('name') == 'test'
