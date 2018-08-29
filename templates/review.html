@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <!-- Required Stylesheets -->
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
 
-    <!-- Required scripts -->
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Required Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
+
+  <!-- Required scripts -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+</head>
 
 <body>
   <div id="app">
-  <b-container>
-    <br><br>
-    <b-btn variant="success"><a href="/add" style="color:white">Add Fields</a></b-btn>
-    <br><br>
-    <br><br>
-    <b-list-group>
-      {% for risk in risk %}
-      <b-list-group-item class="w-50" variant="dark">{{risk.name}}</b-list-group-item>
-      {% endfor %}
-      {% for field in field %}
-      <b-list-group-item class="w-50" placeholder="N/A">{{ field.name }}</b-list-group-item>
-      <b-list-group-item class="w-50">{{ field.number }}</b-list-group-item>
-      <b-list-group-item class="w-50">{{ field.date }}</b-list-group-item>
-      {% endfor %}
-    </b-list-group>
-</b-container>
+    <b-container>
+      <br><br>
+      <b-btn variant="success"><a href="/add" style="color:white">Add Fields</a></b-btn>
+      <br><br>
+      <br><br>
+      <b-list-group>
+        {% for risk in risk %}
+        <b-list-group-item class="w-50" variant="dark">{{risk.name}}</b-list-group-item>
+        {% endfor %}
+        {% for field in field %}
+        <b-list-group-item class="w-50" placeholder="N/A">{{ field.name }}</b-list-group-item>
+        <b-list-group-item class="w-50">{{ field.number }}</b-list-group-item>
+        <b-list-group-item class="w-50">{{ field.date }}</b-list-group-item>
+        {% endfor %}
+      </b-list-group>
+    </b-container>
 
-</div>
-<script>
-  window.app = new Vue({
-    el: "#app",
-    data: {
-    },
-    computed: {
-    }
-  })
-</script>
+  </div>
+  <script>
+    window.app = new Vue({
+      el: "#app",
+      data: {},
+      computed: {}
+    })
+  </script>
 
 </body>
+
 </html>
