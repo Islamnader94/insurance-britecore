@@ -1,6 +1,3 @@
 *.py[cod]
-build
-bin
-lib
 risks.db
 ERD.png

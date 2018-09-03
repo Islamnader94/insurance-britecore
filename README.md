@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 ERD-Diagram:
 
-https://octodex.github.com/images/ERD.png
+![Screenshot](ERD.png)
 
 ### Running the App
 
