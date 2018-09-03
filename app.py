@@ -8,9 +8,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///risks.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 db = SQLAlchemy(app)
 
-
+from views import *
 if __name__ == "__main__":
 
-    from views import *
+
 
     app.run()
