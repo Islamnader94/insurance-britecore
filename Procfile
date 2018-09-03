@@ -1,1 +1,1 @@
-web: gunicorn app:insurance-britecore --log-file=-
+web: gunicorn app:app --log-file=-
