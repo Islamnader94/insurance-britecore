@@ -10,6 +10,6 @@ install:
 script:
   - python app.py
   - coverage run test_api.py
-  -coverage run test_base.py
+  - coverage run test_base.py
 after_success:
   - codecov
