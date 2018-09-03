@@ -3,6 +3,11 @@
 ```
 pip install -r requirements.txt
 ```
+### Entity relationship Diagram
+
+ERD-Diagram:
+
+https://octodex.github.com/images/ERD.png
 
 ### Running the App
 
