@@ -8,52 +8,51 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <!-- Required Stylesheets -->
   <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
-
-  <!-- Required scripts -->
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
-  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 </head>
 
 <body>
 
   {% if risk %}
-
   <p><strong>{{risk.name}}</strong> successfully created! Add another below.</p>
   <button class="btn btn-primary active btn-md" ><a href="/review" style="color:white">Back to Risk</a></button>
-
   {% endif %}
 
+  <br><br>
+  <br><br>
 
   <!-- The form action and method correspond to a Flask route -->
   <form action="/addrisk" method="POST">
-
-    <div id="app">
-
-      <b-container>
+    <div class="container">
+      <div class="form text-center">
+        <h6>Name</h6>
+        <input type="text" class="form-control w-50 mx-auto" name ="name_risk" id="name_id" placeholder="Enter Name">
         <br><br>
-        <label for="name_id">Name:</label>
-        <b-input id="name_id" placeholder="Enter Name" name="name_risk" type="text" class="w-50" />
-        </b-input>
-        <br></br>
-
         <!--a submit button to submit a form! -->
-        <b-btn size="sm" type="submit" variant="success" value="Add">Submit</b-btn>
-      </b-container>
+        <button type="submit" value="Add" class="btn btn-success">Submit</button>
+      </div>
     </div>
   </form>
-
-
-<!-- Start running your app -->
-<script>
-  window.app = new Vue({
-    el: "#app",
-    data: {},
-    computed: {}
-  })
-</script>
 
 </body>
 
 </html>
+
+<style type="text/css">
+  .form {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border-color: #d2d2d2;
+    border-width: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 0 2px 0 #cfcfcf;
+  }
+
+  body {
+    background: #C0C0C0;
+  }
+</style>

@@ -1,6 +1,7 @@
 from app import db
 import datetime
 
+
 class Field(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
@@ -8,11 +9,11 @@ class Field(db.Model):
     number = db.Column(db.Integer)
     date = db.Column(db.Date)
 
-
     def __init__(self, name, number, date):
         self.name = name
         self.number = number
         self.date = datetime.datetime.strptime(date, '%Y-%m-%d').date()
+
 
 class Risk(db.Model):
 
@@ -22,23 +23,26 @@ class Risk(db.Model):
     def __init__(self, name):
         self.name = name
 
+
 class FieldType(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
+    field_id_fk = db.Column(db.Integer, db.ForeignKey('field.id'))
 
 
 def create_fields(new_name, new_number, new_date):
 
     field = Field(new_name, new_number, new_date)
 
-    #add this fields to the database
+    # add this fields to the database
     db.session.add(field)
 
     # Save all pending changes to the database
     db.session.commit()
 
     return field
+
 
 def create_risk(new_name):
 
@@ -49,6 +53,7 @@ def create_risk(new_name):
     db.session.commit()
 
     return risk
+
 
 def delete_fields(old_name, old_number, old_date):
 

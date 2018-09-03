@@ -20,18 +20,21 @@ def review():
     return render_template('review.html', field=field, risk=risk)
 
 # retriving single risk by id
+
+
 @app.route('/risk/<id>', methods=['GET'])
 def getby_id():
     risk = Risk.query.filter_by(id=id).first()
     return user_schema.jsonify(risk)
 
 # adding fields
+
+
 @app.route('/add', methods=['GET', 'POST'])
 def add():
 
     if request.method == 'GET':
         return render_template('add.html')
-
 
     field_name = request.form.get('name_field')
     field_number = request.form.get('number_field')
@@ -42,12 +45,12 @@ def add():
 
 # adding risk type
 
+
 @app.route('/addrisk', methods=['GET', 'POST'])
 def addrisk():
 
     if request.method == 'GET':
         return render_template('addrisk.html')
-
 
     risk_name = request.form.get('name_risk')
 
@@ -59,14 +62,4 @@ def addrisk():
 def delete():
 
     if request.method == 'DELETE':
-       field = delete_fields(old_name, oldnumber, old_date)
-
-#error handling routes
-#@app.errorhandler(404)
-#def not_found_error(error):
-    #return render_template('404.html'), 404
-
-#@app.errorhandler(500)
-#def internal_error(error):
-    #db.session.rollback()
-    #return render_template('500.html'), 500
+        field = delete_fields(old_name, oldnumber, old_date)

@@ -8,38 +8,44 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <!-- Required Stylesheets -->
   <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
 
-  <!-- Required scripts -->
-  <script src="https://unpkg.com/vue"></script>
-  <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
-  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 </head>
 
 <body>
-  <div id="app">
-    <br><br>
-    <br><br>
-    <div>
-      <b-card bg-variant="secondary" text-variant="white" title="Type Of Risk" style="height: 15rem;">
-        <p class="card-text">
-          Please click on the button below to add your risk type.
-        </p>
+  <br><br>
+  <br><br>
+  <div>
+    <div class="card text-center">
+      <div class="card-header">
+        Risk Type
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Please click on the button below to add your risk type.</h5>
         <br><br>
-        <b-btn variant="success"><a href="/addrisk" style="color:white">Add Risk</a></b-btn>
-      </b-card>
+        <button class="btn btn-success"><a href="/addrisk" style="color:white">Add Risk</a></button>
+      </div>
     </div>
-
-
   </div>
-  <script>
-    window.app = new Vue({
-      el: "#app",
-      data: {},
-      computed: {}
-    })
-  </script>
 
 </body>
 
 </html>
+
+<style type="text/css">
+  .card {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border-color: #d2d2d2;
+    border-width: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 0 1px 0 #cfcfcf;
+  }
+
+  body {
+    background: #C0C0C0;
+  }

@@ -1,9 +1,7 @@
 import unittest
-import json
-import simplejson
 import os
 import requests
-from app import app, db
+from app import app
 
 
 class TestAPI(unittest.TestCase):
@@ -12,14 +10,6 @@ class TestAPI(unittest.TestCase):
 
         self.client = app.test_client()
         app.config['TESTING'] = True
-        db.create_all()
-
-    def tearDown(self):
-
-        db.session.close()
-        db.drop_all()
-
-
 
     def test_is_main_routing_working(self):
         """
@@ -42,8 +32,6 @@ class TestAPI(unittest.TestCase):
 
         response = requests.get('http://127.0.0.1:5000/review')
         self.assertEqual(response.status_code, 200)
-
-
 
 
 if __name__ == '__main__':

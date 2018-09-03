@@ -11,10 +11,41 @@ To run the app, first run the `models.py` file directly to create the database t
 ```
 $ python models.py
 ```
+### Running the tests
 
-You only need to do this once, unless you change your model definitions (see below).
+To run the Database test:
 
-Then run the app itself:
+```
+$ python test_base.py
+```
+
+To run the api test:
+
+```
+$ python test_api.py
+```
+
+To run the server test:
+
+```
+$ python test_server.py
+```
+### For pep8 checking:
+
+To install autopep8:
+
+```
+$ pip install autopep8==0.8
+```
+
+run the following command as the example below ending with .py,
+then copy & paste the code to check if there where changes:
+
+```
+$ autopep8 models.py
+```
+
+To run the app itself:
 
 ```
 $ python app.py
