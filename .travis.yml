@@ -9,4 +9,3 @@ install:
 script:
   - coverage run test_api.py
   - coverage run test_base.py
-  - python app.py
