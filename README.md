@@ -16,25 +16,7 @@ To run the app, first run the `models.py` file directly to create the database t
 ```
 $ python models.py
 ```
-### Running the tests
 
-To run the Database test:
-
-```
-$ python test_base.py
-```
-
-To run the api test:
-
-```
-$ python test_api.py
-```
-
-To run the server test:
-
-```
-$ python test_server.py
-```
 ### For pep8 checking:
 
 To install autopep8:
@@ -57,6 +39,26 @@ $ python app.py
 ```
 
 Visit [http://localhost:5000/](http://localhost:5000/) in your browser to see the results.
+
+### Running the tests:
+
+To run the Database test:
+
+```
+$ python test_base.py
+```
+
+To run the api test make sure to run the app.py first:
+
+```
+$ python test_api.py
+```
+
+To run the server test make sure to run the server.py first:
+
+```
+$ python test_server.py
+```
 
 ### checking the demo:
 To access the demo please visit the link below:
