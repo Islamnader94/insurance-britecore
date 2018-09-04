@@ -3,7 +3,7 @@ import datetime
 
 
 class Field(db.Model):
-
+    __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     number = db.Column(db.Integer, nullable=False)
@@ -16,7 +16,7 @@ class Field(db.Model):
 
 
 class Risk(db.Model):
-
+    __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=True)
 
@@ -25,7 +25,7 @@ class Risk(db.Model):
 
 
 class FieldType(db.Model):
-
+    __table_args__ = {'extend_existing': True} 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     field_id_fk = db.Column(db.Integer, db.ForeignKey('field.id'))

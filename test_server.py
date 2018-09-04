@@ -1,5 +1,4 @@
 import requests
-from app import app
 import unittest
 from flask import Flask
 from flask_testing import LiveServerTestCase
@@ -17,7 +16,7 @@ class MyTest(LiveServerTestCase):
         return app
 
     def test_server_is_up_and_running(self):
-        response = requests.get(self.get_server_url()+'/')
+        response = requests.get('http://127.0.0.1:5000/')
         self.assertEqual(response.status_code, 200)
 
 
