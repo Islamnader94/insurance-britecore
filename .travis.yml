@@ -8,9 +8,4 @@ install:
 # command to run tests
 
 script:
-  - python app.py -v
-
-script:
-  - python test_api.py -v
   - python test_base.py -v
-  - python test_server.py -v
