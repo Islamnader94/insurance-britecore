@@ -60,7 +60,7 @@ To run the server test make sure to run the server.py first:
 $ python test_server.py
 ```
 
-### checking the demo:
+### Checking the demo:
 To access the demo please visit the link below:
 
 Visit [https://insurance-britecore.herokuapp.com/](https://insurance-britecore.herokuapp.com/) in your browser.
