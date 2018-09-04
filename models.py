@@ -5,9 +5,9 @@ import datetime
 class Field(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
-    number = db.Column(db.Integer)
-    date = db.Column(db.Date)
+    name = db.Column(db.String(100), nullable=False)
+    number = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.Date, nullable=False)
 
     def __init__(self, name, number, date):
         self.name = name
